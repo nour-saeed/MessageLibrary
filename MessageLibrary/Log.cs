@@ -5,17 +5,23 @@ namespace MessageLibrary
 {
     public static class Log
     {
-        public static MessageType Type = MessageType.None;
-
         public static bool StatusOk = true;
+        public static LogConfigurations Configuration;
 
-        public static void Write(string Message)
+        public static void Write(
+            string Message,
+            Exception ex = null,
+            MessageType type = MessageType.None,
+            LogConfigurations log = null
+            )
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\Log.txt", true))
+                log = log ?? Configuration;
+
+                using (StreamWriter sw = new StreamWriter(log.FilePath + "\\" + log.FileName, true))
                 {
-                    sw.WriteLine(DateTime.Now.ToString() + ": " + Message);
+                    sw.WriteLine(log.GetPrevious(type) + Message);
                     sw.Flush();
                     sw.Close();
                 }

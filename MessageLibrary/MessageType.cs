@@ -8,7 +8,7 @@ namespace MessageLibrary
     [Flags]
     public enum MessageType
     {
-        NULL = 0,           // 00000
+        None = 0,           // 00000
         Error = 1,          // 00001
         Warning = 2,        // 00010
         Information = 4,    // 00100

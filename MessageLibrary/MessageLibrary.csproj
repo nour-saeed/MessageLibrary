@@ -43,6 +43,8 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="MessageConfigurations.cs" />
+    <Compile Include="MessageDestination.cs" />
     <Compile Include="MessageType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Writer.cs" />

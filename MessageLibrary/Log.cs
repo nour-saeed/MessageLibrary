@@ -5,6 +5,8 @@ namespace MessageLibrary
 {
     public static class Log
     {
+        public static MessageType Type = MessageType.None;
+
         public static bool StatusOk = true;
 
         public static void Write(string Message)

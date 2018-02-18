@@ -5,19 +5,21 @@ namespace MessageLibrary
     /// <summary>
     /// Message class, conatin data about a message.
     /// </summary>
-    public class Message
+    public static class Message
     {
         #region Global
         
         /// <summary>
         /// MessageType Type: contain the type of the message.
         /// </summary>
-        public MessageType Type = MessageType.NULL;
+        public MessageType Type = MessageType.None;
 
         /// <summary>
         /// String Message(Msg): conatin the message as string.
         /// </summary>
         public string Msg = String.Empty;
+
+        
 
         #endregion
 
